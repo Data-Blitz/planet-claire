@@ -1,0 +1,77 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,ReceivedClaimFactColumnName,ReceivedClaimProcedureFactColumnName,ReceivedClaimMedicationFactColumnName
+CUR_CLM_UNIQ_ID,Current Claim Unique Identifier,1,13,13,9(13),A unique identification number assigned to the claim.,Id,,
+PRVDR_OSCAR_NUM,Provider Facility OSCAR Number,14,19,6,X(06),"A facility’s Medicare/Medicaid identification number. It is also known as a Medicare/Medicaid Provider Number, or CCN. This number verifies that a provider has been Medicare certified for a particular type of service.",PlaceOfServiceId,,
+BENE_HIC_NUM,Beneficiary HIC Number,20,30,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId,,
+CLM_TYPE_CD,Claim Type Code,31,32,2,9(02),"Signifies the type of claim being submitted through the Medicare or Medicaid programs. Claim type codes are:                                                                                                              10=HHA claim
+20=Non swing bed SNF claim
+30=Swing bed SNF claim
+40=Outpatient claim
+50=Hospice claim
+60=Inpatient claim
+61=Inpatient “Full-Encounter” claim",CDW Spec,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_FROM_DT,Claim From Date,33,42,10,YYYY-MM-DD,The first day on the billing statement that covers services rendered to the beneficiary. Also known as “Statement Covers From Date.”,StartDate,,
+CLM_THRU_DT,Claim Thru Date,43,52,10,YYYY-MM-DD,The last day on the billing statement that covers services rendered to the beneficiary. Also known as the “Statement Covers Through Date.”,EndDate,,
+CLM_BILL_FAC_TYPE_CD,Claim Bill Facility Type Code,53,53,1,X(01),"The first digit of the type of bill (TOB1) is used to identify the type of facility that provided care to the beneficiary (e.g., hospital or SNF). Claim Facility Type Codes are:         1=Hospital
+2= SNF
+3= HHA
+4=Religious non-medical (hospital)
+5=Religious non-medical (extended care)
+6=Intermediate care
+7=Clinic or hospital-based renal dialysis facility
+8=Specialty facility or Ambulatory Surgical Center (ASC) surgery
+9=Reserved",TypeOfBillCode,,
+,,,,,,,,,
+CLM_BILL_CLSFCTN_CD,Claim Bill Classification Code,54,54,1,X(01),"The second digit of the type of bill (TOB2) is used to indicate with greater specificity where the service was provided (e.g., a department within a hospital). Find Claim Service Classification Codes here: http://www.resdac.org/cms-data/variables/Claim-Service-classification-Type-Code",TypeOfBillCode,,
+PRNCPL_DGNS_CD,Principal Diagnosis Code,55,61,7,X(07),The International Classification of Diseases (ICD)-9/10 diagnosis code identifies the beneficiary’s principal illness or disability.,,,
+ADMTG_DGNS_CD,Admitting Diagnosis Code,62,68,7,X(07),The ICD-9/10 diagnosis code identifies the illness or disability for which the beneficiary was admitted.,,,
+CLM_MDCR_NPMT_RSN_CD,Claim Medicare non-payment reason code,69,70,2,X(02),Indicates the reason payment on an institutional claim is denied. Find Medicare Non-Payment Reason Codes here: http://www.resdac.org/cms-data/variables/claim-medicare-non-payment-reason-code,,,
+,,,,,,,,,
+CLM_PMT_AMT,Claim payment amount,71,87,17,-9(13).99,Amount that Medicare paid on the claim.,TotalInsuranceAmount,,
+CLM_NCH_PRMRY_PYR_CD,Claim NCH Primary Payer Code,88,88,1,X(01),"If a payer other than Medicare has primary responsibility for payment of the beneficiary’s health insurance bills, this code indicates the responsible primary payer. If this field is blank, Medicare is the primary payer for the beneficiary.  Find NCH Primary Payer Codes here: http://www.resdac.org/cms-data/variables/NCH-Primary-Payer-Code","PrimaryCoverageId, SecondCoverageId",,
+PRVDR_FAC_FIPS_ST_CD,Federal Information Processing Standards (FIPS) State Code,89,90,2,X(02),Identifies the state where the facility providing services is located.,,,
+BENE_PTNT_STUS_CD,Beneficiary Patient Status Code,91,92,2,X(02),"Indicates the patient's discharge status as of the Claim Through Date. For example, it may indicate where a patient was discharged to (e.g., home, another facility) or the circumstances of a discharge (e.g., against medical advice, or patient death). Find Patient Discharge Status Codes here: http://www.resdac.org/cms-data/variables/patient-discharge-status-code",,,
+DGNS_DRG_CD,Diagnosis Related Group Code,93,96,4,X(04),Indicates the diagnostic related group to which a hospital claim belongs for prospective payment purposes.,DrgId,,
+CLM_OP_SRVC_TYPE_CD,Claim Outpatient Service Type Code,97,97,1,X(01),"Indicates the type and priority of outpatient service. Claim Outpatient Service Type Codes are:
+0=Blank
+1=Emergency
+2=Urgent
+3=Elective
+5-8=Reserved
+9=Unknown",,,
+FAC_PRVDR_NPI_NUM,Facility Provider NPI Number,98,107,10,X(10),Identifies the facility associated with the claim. Each facility is assigned its own unique NPI.,,,
+OPRTG_PRVDR_NPI_NUM,Operating Provider NPI Number,108,117,10,X(10),Identifies the operating provider associated with the claim. Each provider is assigned its own unique NPI.,OperatingProviderId,,
+ATNDG_PRVDR_NPI_NUM,Attending Provider NPI Number,118,127,10,X(10),Identifies the attending provider associated with the claim. Each provider is assigned its own unique NPI.,AttendingProviderId,,
+OTHR_PRVDR_NPI_NUM,Claim Other Physician NPI Number,128,137,10,X(10),Identifies the other providers associated with the claim. Each provider is assigned its own unique NPI.,OtherProviderId,,
+CLM_ADJSMT_TYPE_CD,Claim Adjustment Type Code,138,139,2,X(02),"Indicates whether the claim is an original, cancelation, or adjustment claim. 
+Claim Adjustment Type Codes are:
+0=Original Claim
+1=Cancelation Claim
+2=Adjustment claim",,,
+CLM_EFCTV_DT,Claim Effective Date,140,149,10,X(10),Date the claim was processed and added to the NCH. Also referred to as the NCH Weekly Processing Date.,,,
+CLM_IDR_LD_DT,Claim IDR Load Date,150,159,10,X(10),When the claim was loaded into the IDR.,,,
+BENE_EQTBL_BIC_HICN_NUM,Beneficiary Equitable BIC HICN Number,160,170,11,X(11),"This number is an “umbrella” HICN that groups certain HICNs together at the beneficiary level. For example, if a beneficiary’s spouse becomes widowed, the HICN will change, but the Beneficiary Equitable BIC HICN will not. This groups the pre- and post-widow status HICNs together. Note that the ONLY use of this field is to link together claims that all represent the same event, using the natural key.",,,
+CLM_ADMSN_TYPE_CD,Claim Admission Type Code,171,172,2,X(2),"Indicates the type and priority of inpatient services. Claim Admission Type Codes are:
+0=Blank
+1=Emergency
+2=Urgent
+3=Elective
+4=Newborn
+5=Trauma Center
+6-8=Reserved
+9=Unknown",,,
+CLM_ADMSN_SRC_CD,Claim Admission Source Code,173,174,2,X(2),"Indicates the source of the beneficiary’s referral for admission or visit (e.g., a physician or another facility). Find Admission Source Codes here: http://www.resdac.org/cms-data/variables/Claim-Source-Inpatient-Admission-Code",,,
+CLM_BILL_FREQ_CD,Claim Bill Frequency Code,175,175,1,X(1),"The third digit of the type of bill (TOB3) code. It indicates the sequence of the claim in the beneficiary's current episode of care (e.g., interim or voided). Find Claim Frequency Codes here: http://www.resdac.org/cms-data/variables/Claim-Frequency-Code",TypeOfBillCode,,
+CLM_QUERY_CD,Claim Query Code,176,176,1,X(1),"Indicates the type of claim record being processed with respect to payment (e.g., debit/credit indicator or interim/final indicator). Claim Query Codes are:
+0=Credit adjustment
+1=Interim bill
+2=HHA benefits exhausted
+3=Final bill
+4=Discharge notice
+5=Debit adjustment",,,

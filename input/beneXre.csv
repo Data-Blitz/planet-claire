@@ -1,0 +1,6 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,IdentityInfo
+CRNT_HIC_NUM,Current HIC Number,1,11,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim","Id, MapToId"
+PRVS_HIC_NUM,Previous HIC Number,12,22,11,X(11),The HICN that appears in this field is the beneficiary’s previous HICN.,MapFromId
+PRVS_HICN_EFCTV_DT,Previous HICN Effective Date,23,32,10,YYYY-MM-DD,The date the previous HICN became active.,
+PRVS_HICN_OBSLT_DT,Previous HICN Obsolete Date,33,42,10,YYYY-MM-DD,The date the previous HICN ceased to be active.,
+BENE_RRB_NUM,Beneficiary Railroad Board Number,43,54,12,X(12),The external (to Medicare) HICN for beneficiaries that are RRB members.,

@@ -1,0 +1,26 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,ReceivedClaimFactColumnName,ReceivedClaimProcedureFactColumnName,ReceivedClaimMedicationFactColumnName
+CUR_CLM_UNIQ_ID,Current Claim Unique Identifier,1,13,13,9(13),A unique identification number assigned to the claim.,Id,,
+BENE_HIC_NUM,Beneficiary HIC Number,14,24,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId,,
+CLM_TYPE_CD,Claim Type Code,25,26,2,9(02),"Signifies the type of claim being submitted through the Medicare or Medicaid programs
+Claim type codes are:
+10=HHA claim
+20=Non swing bed SNF claim
+30=Swing bed SNF claim
+40=Outpatient claim
+50=Hospice claim
+60=Inpatient claim
+61=Inpatient “Full-Encounter” claim",ReceivedClaimType,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_VAL_SQNC_NUM,Claim Value Sequence Number,27,28,2,9(2),An arbitrary sequential number that uniquely identifies a procedure code record within the claim.,,,
+CLM_PRCDR_CD,Procedure Code,29,35,7,X(07),The ICD-9/10 code that indicates the procedure performed during the period covered by the claim.,,,
+CLM_PRCDR_PRFRM_DT,Procedure Performed Date,36,45,10,YYYY-MM-DD,The date the indicated procedure was performed.,,,
+BENE_EQTBL_BIC_HICN_NUM,Beneficiary Equitable BIC HICN Number,46,56,11,X(11),"This number is an “umbrella” HICN that groups certain HICNs together at the beneficiary level. For example, if a beneficiary’s spouse becomes widowed, the HICN will change, but the Beneficiary Equitable BIC HICN will not. This groups the pre- and post-widow status HICNs together. Note that the ONLY use of this field is to link together claims that all represent the same event using the natural key.",,,
+PRVDR_OSCAR_NUM,Provider OSCAR Number,57,62,6,X(6),"A facility’s Medicare/Medicaid identification number. It is also known as a Medicare/Medicaid Provider Number, or CCN. This number verifies that a provider has been Medicare certified for a particular type of services.",PlaceOfService,,
+CLM_FROM_DT,Claim From Date,63,72,10,YYYY-MM-DD,The first day on the billing statement that covers services rendered to the beneficiary. Also known as “Statement Covers From Date.”,StartDate,,
+CLM_THRU_DT,Claim Thru Date,73,82,10,YYYY-MM-DD,The last day on the billing statement that covers services rendered to the beneficiary. Also known as the “Statement Covers Through Date.”,EndDate,,

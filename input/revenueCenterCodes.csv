@@ -1,0 +1,116 @@
+code,serviceDescription
+941,Other therapeutic services-recreational therapy
+942,Other therapeutic services-education/training (include diabetes diet training)
+943,Other therapeutic services-cardiac rehabilitation
+944,Other therapeutic services-drug rehabilitation
+945,Other therapeutic services-alcohol rehabilitation
+946,Other therapeutic services-routine complex medical equipment
+947,Other therapeutic services-ancillary complex medical equipment (eff 3/92)
+949,Other therapeutic services-other
+951,Professional Fees-athletic training (extension of 094X)
+952,Professional Fees-kinesiotherapy (extension of 094X)
+960,Professional fees-general classification
+961,Professional fees-psychiatric
+962,Professional fees-ophthalmology
+963,Professional fees-anesthesiologist (MD)
+964,Professional fees-anesthetist (CRNA)
+969,Professional fees-other NOTE:  097X is an extension of 096X
+971,Professional fees-laboratory
+972,Professional fees-radiology diagnostic
+973,Professional fees-radiology therapeutic
+974,Professional fees-nuclear medicine
+975,Professional fees-operating room
+976,Professional fees-respiratory therapy
+977,Professional fees-physical therapy
+978,Professional fees-occupational therapy
+979,Professional fees-speech pathology NOTE:  098X is an extension of 096X & 097X
+981,Professional fees-emergency room
+982,Professional fees-outpatient services
+983,Professional fees-clinic
+984,Professional fees-medical social services
+985,Professional fees-EKG
+986,Professional fees-EEG
+987,Professional fees-hospital visit
+988,Professional fees-consultation
+989,Professional fees-private duty nurse
+990,Patient convenience items-general classification
+991,Patient convenience items-cafeteria/guest tray
+992,Patient convenience items-private linen service
+993,Patient convenience items-telephone/telegraph
+994,Patient convenience items-tv/radio
+995,Patient convenience items-nonpatient room rentals
+996,Patient convenience items-late discharge charge
+997,Patient convenience items-admission kits
+998,Patient convenience items-beauty shop/barber
+999,Patient convenience items-other
+9000,RUGS-no MDS assessment available
+9001,Reduced physical functions-RUGS PA1/ADL index of 4-5
+9002,Reduced physical functions-RUGS PA2/ADL index of 4-5
+9003,Reduced physical functions-RUGS PB1/ADL index of 6-8
+9004,Reduced physical functions-RUGS PB2/ADL index of 6-8
+9005,Reduced physical functions-RUGS PC1/ADL index of 9-10
+9006,Reduced physical functions-RUGS PC2/ADL index of 9-10
+9007,Reduced physical functions-RUGS PD1/ADL index of 11-15
+9008,Reduced physical functions-RUGS PD2/ADL index of 11-15
+9009,Reduced physical functions-RUGS PE1/ADL index of 16-18
+9010,Reduced physical functions-RUGS PE2/ADL index of 16-18
+9011,Behavior only problems-RUGS BA1/ADL index of 4-5
+9012,Behavior only problems-RUGS BA2/ADL index of 4-5
+9013,Behavior only problems-RUGS BB1/ADL index of 6-10
+9014,Behavior only problems-RUGS BB2/ADL index of 6-10
+9015,Impaired cognition-RUGS IA1/ADL index of 4-5
+9016,Impaired cognition-RUGS IA2/ADL index of 4-5
+9017,Impaired cognition-RUGS IB1/ADL index of 6-10
+9018,Impaired cognition-RUGS IB2/ADL index of 6-10
+9019,Clinically complex-RUGS CA1/ADL index of 4-5
+9020,Clinically complex-RUGS CA2/ADL index of 4-5d
+9021,Clinically complex-RUGS CB1/ADL index of 6-10
+9022,Clinically complex-RUGS CB2/ADL index of 6-10d
+9023,Clinically complex-RUGS CC1/ADL index of 11-16
+9024,Clinically complex-RUGS CC2/ADL index of 11-16d
+9025,Clinically complex-RUGS CD1/ADL index of 17-18
+9026,Clinically complex-RUGS CD2/ADL index of 17-18d
+9027,Special care-RUGS SSA/ADL index of 7-13
+9028,Special care-RUGS SSB/ADL index of 14-16
+9029,Special care-RUGS SSC/ADL index of 17-18
+9030,Extensive services-RUGS SE1/1 procedure
+9031,Extensive services-RUGS SE2/2 procedures
+9032,Extensive services-RUGS SE3/3 procedures
+9033,Low rehabilitation-RUGS RLA/ADL index of 4-11
+9034,Low rehabilitation-RUGS RLB/ADL index of 12-18
+9035,Medium rehabilitation-RUGS RMA/ADL index of 4-7
+9036,Medium rehabilitation-RUGS RMB/ADL index of 8-15
+9037,Medium rehabilitation-RUGS RMC/ADL index of 16-18
+9038,High rehabilitation-RUGS RHA/ADL index of 4-7
+9039,High rehabilitation-RUGS RHB/ADL index of 8-11
+9040,High rehabilitation-RUGS RHC/ADL index of 12-14
+9041,High rehabilitation-RUGS RHD/ADL index of 15-18
+9042,Very high rehabilitation-RUGS RVA/ADL index of 4-7
+9043,Very high rehabilitation-RUGS RVB/ADL index of 8-13
+9044,Very high rehabilitation-RUGS RVC/ADL index of 14-18
+9019,Clinically complex-RUGS CA1/ADL index of 11
+9020,Clinically complex-RUGS CA2/ADL index of 11D
+9021,Clinically complex-RUGS CB1/ADL index of 12-16
+9022,Clinically complex-RUGS CB2/ADL index of 12-16D
+9023,Clinically complex-RUGS CC1/ADL index of 17-18
+9024,Clinically complex-RUGS CC2/ADL index of 17-18D
+9025,Special care-RUGS SSA/ADL index of 14
+9026,Special care-RUGS SSB/ADL index of 15-16
+9027,Special care-RUGS SSC/ADL index of 17-18
+9028,Extensive services-RUGS SE1/ADL index 7-18/1 procedure
+9029,Extensive services-RUGS SE2/ADL index 7-18/2 procedures
+9030,Extensive services-RUGS SE3/ADL index 7-18/3 procedures
+9031,Low rehabilitation-RUGS RLA/ADL index of 4-13
+9032,Low rehabilitation-RUGS RLB/ADL index of 14-18
+9033,Medium rehabilitation-RUGS RMA/ADL index of 4-7
+9034,Medium rehabilitation-RUGS RMB/ADL index of 8-14
+9035,Medium rehabilitation-RUGS RMC/ADL index of 15-18
+9036,High rehabilitation-RUGS RHA/ADL index of 4-7
+9037,High rehabilitation-RUGS RHB/ADL index of 8-12
+9038,High rehabilitation-RUGS RHC/ADL index of 13-18
+9039,Very High rehabilitation-RUGS RVA/ADL index of 4-8
+9040,Very high rehabilitation-RUGS RVB/ADL index of 9-15
+9041,Very high rehabilitation-RUGS RVC/ADL index of 16
+9042,Very high rehabilitation-RUGS RUA/ADL index of 4-8
+9043,Very high rehabilitation-RUGS RUB/ADL index of 9-15
+9044,Ultra high rehabilitation-RUGS RUC/ADL index of 16-18

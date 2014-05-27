@@ -1,0 +1,47 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,PatientDimColumnName
+BENE_HIC_NUM,Beneficiary HIC Number,1,11,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId
+BENE_FIPS_STATE_CD,Beneficiary FIPS State code,12,13,2,9(02),Identifies the state where the beneficiary receiving services resides.,StateOrProvince
+BENE_FIPS_CNTY_CD,Beneficiary FIPS County Code,14,16,3,9(03),Identifies the county where the beneficiary receiving services resides.,County
+BENE_ZIP_CD,Beneficiary ZIP Code,17,21,5,X(05),The beneficiary’s ZIP code as indicated in their Medicare enrollment record.,PostalCode
+BENE_DOB,Beneficiary Date of Birth,22,31,10,YYYY-MM-DD,"The month, day, and year of the beneficiary’s birth.",BirthDate
+BENE_SEX_CD,Beneficiary Sex code,32,32,1,X(01),"The beneficiary’s sex:
+1=Male
+2=Female 
+0=Unknown",Sex
+,,,,,,,
+,,,,,,,
+,,,,,,,
+BENE_RACE_CD,Beneficiary Race Code,33,33,1,X(01),"The beneficiary's race:
+0=Unknown
+1=White
+2=Black
+3=Other
+4=Asian
+5=Hispanic
+6=North American Native",FirstRace
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+BENE_AGE,Beneficiary Age from date of birth,34,36,3,9(03),"The beneficiary’s current age, as calculated by subtracting the beneficiary’s date of birth from the current date.",
+BENE_MDCR_STUS_CD,Beneficiary Medicare Status Code,37,38,2,X(02),"Indicates the reason for a beneficiary's entitlement to Medicare benefits as of a particular date, broken down by the following categories: Old Age & Survivors Insurance (OASI), Disabled, and End Stage Renal Disease (ESRD), and by appropriate combinations of these categories:
+10=Aged without ESRD
+11=Aged with ESRD
+20=Disabled without ESRD
+21=Disabled with ESRD
+31=ESRD only",
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+BENE_DUAL_STUS_CD,Beneficiary Dual Status Code,39,40,2,X(02),"Identifies the most recent entitlement status of beneficiaries eligible for a program(s) in addition to Medicare (e.g., Medicaid). Find Dual Status Codes here: http://www.resdac.org/cms-data/variables/Dual-Status-Code-occurs-12-times",
+BENE_DEATH_DT,Beneficiary Death Date,41,50,10,YYYY-MM-DD,"The month, day, and year of a beneficiary’s death.",DeathDate
+BENE_RNG_BGN_DT,Date beneficiary enrolled in Hospice,51,60,10,YYYY-MM-DD,The date the beneficiary enrolled in Hospice.,
+BENE_RNG_END_DT,Date beneficiary ended Hospice,61,70,10,YYYY-MM-DD,The date the beneficiary is-enrolled in hospice.,
+BENE_1ST_NAME,Beneficiary First Name,71,100,30,X(30),The first name of the beneficiary.,"FirstName, Name"
+BENE_MIDL_NAME,Beneficiary Middle Name,101,115,15,X(15),The middle name of the beneficiary.,"MiddleName, Name"
+BENE_LAST_NAME,Beneficiary Last Name,116,155,40,X(40),The last name of the beneficiary.,"LastName, Name"

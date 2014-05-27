@@ -1,0 +1,151 @@
+{
+
+    "dataStores": {
+        "population": {
+            "bucketName": "planet-claire",
+            "count": 100,
+            "method": {
+                "name": "randomUnique"
+            }
+        },
+        "documentSchema": {
+            "bucketName": "doc-templates"
+        }
+    },
+    "batchId":"generatedProviderClaims",
+
+    "events": [
+        {
+            "data":"./configuration/providerClaim.json"
+        }
+    ],
+
+
+    "outboundDirectory":"./output",
+    "outboundStreams": [
+        {
+            "documentSchema": "claims.header.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                },
+                {
+                    "dataWriter":"./dataWriters/HoopCeDataWriter.js",
+                    "configuration":{
+                        "hoopUrl":"localhost:8080",
+                        "chunkSize":100
+                    }
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.beneficiary.demographics.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.benexre.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.d.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.diagnosis.code.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.dme.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.physician.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.procedure.code.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        },
+        {
+            "documentSchema": "claims.revenue.center.detail.schema",
+            "writers": [
+                {
+                    "dataWriter":"./dataWriters/jsonDataWriter",
+                    "configuration":{"folder":"json"}
+                },
+                {
+                    "dataWriter":"./dataWriters/cmsFixedFieldDataWriter",
+                    "configuration":{"folder":"cms-fixed-field"}
+                }
+            ]
+        }
+    ]
+}

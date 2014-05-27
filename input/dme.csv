@@ -1,0 +1,35 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,ReceivedClaimFactColumnName,ReceivedClaimProcedureFactColumnName,ReceivedClaimMedicationFactColumnName
+CUR_CLM_UNIQ_ID,Current Claim Unique Identifier,1,13,13,9(13),A unique identification number assigned to the claim.,Id,"Id, ReceivedClaimId",
+CLM_LINE_NUM,Claim Line Number,14,23,10,9(10),A sequential number that identifies a specific claim line.,,Id,
+BENE_HIC_NUM,Beneficiary HIC Number,24,34,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId,PatientId,
+CLM_TYPE_CD,Type of Claim Submitted,35,36,2,9(02),"Signifies the type of claim being submitted through the Medicare or Medicaid programs. Claim type codes are: 
+81=RIC M DMERC non-DMEPOS claim
+82=RIC M DMERC DMEPOS claim",ReceivedClaimType,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_FROM_DT,Claim From Date,37,46,10,YYYY-MM-DD,The first day on the billing statement that covers services rendered to the beneficiary. Also known as the “Statement Covers From Date.”,StartDate,,
+CLM_THRU_DT,Claim Thru Date,47,56,10,YYYY-MM-DD,The last day on the billing statement that covers services rendered to the beneficiary. Also known as the “Statement Covers Through Date.”,EndDate,,
+CLM_FED_TYPE_SRVC_CD,Claim Federal Type Service Code,57,57,1,X(01),"Indicates the type of service (e.g., consultation, surgery) provided to the beneficiary. Types of Service Codes are defined in the Medicare Carrier Manual. Find Types of Service Codes here: http://www.resdac.org/sites/resdac.org/files/CMS%20Type%20of%20Service%20Table.txt",,ServiceType,
+CLM_POS_CD,Claim Place of Service Code,58,59,2,X(02),"Indicates the place where the indicated service was provided (e.g., ambulance, school). Places of service are defined in the Medicare Carrier Manual. Find Place of Service Codes here: http://www.resdac.org/sites/resdac.org/files/Place%20of%20Service%20Table.txt",,PlaceOfServiceType,
+CLM_LINE_FROM_DT,Line Claim From Date,60,69,10,YYYY-MM-DD,The date the service associated with the line item began.,,PerformedStartDate,
+CLM_LINE_THRU_DT,Line Claim Thru Date,70,79,10,YYYY-MM-DD,The date the service associated with the line item ended.,,PerformedEndDate,
+CLM_LINE_HCPCS_CD,HCPCS Code,80,84,5,X(05),"The HCPCS code representing the procedure, supply, product, and/or service provided to the beneficiary.",,"ProcedureCodeType, ProcedureCode, ProcedureId",
+CLM_LINE_CVRD_PD_AMT,Claim Line Covered Paid Amount,85,99,15,-9(11).99,The amount of payment made by Medicare on behalf of the beneficiary for the indicated service after deductible and coinsurance amounts have been paid.,TotalInsuranceAmount,InsuranceAmount,
+CLM_PRMRY_PYR_CD,Line Beneficiary Primary Payer Code,100,100,1,X(01),"If a payer other than Medicare has primary responsibility for payment of the service indicated on the claim line, this code indicates the primary payer. This field is also known as the Line Beneficiary Primary Payer Code. If this field is blank, Medicare is the primary payer for the beneficiary. Find Primary Payer Codes here: http://www.resdac.org/cms-data/variables/Line-Beneficiary-Primary-Payer-Code","PrimaryCoverageId, SecondCoverageId","PrimaryCoverageId, SecondCoverageId",
+PAYTO_PRVDR_NPI_NUM,Carrier Line Paid To NPI Number,101,110,10,X(10),A number that identifies the provider billing for the indicated service on the claim line. Each provider is assigned its own unique NPI.,,BillingProviderId,
+ORDRG_PRVDR_NPI_NUM,Carrier Line Ordering NPI Number,111,120,10,X(10),A number that identifies the provider ordering the indicated service on the claim line. Each provider is assigned its own unique NPI.,,,
+CLM_CARR_PMT_DNL_CD,Claim Carrier Payment Denial Code,121,122,2,X(02),"Indicates to whom payment was made (e.g., physician, beneficiary), or if the claim was denied. Find Carrier Payment Denial Codes here: http://www.resdac.org/sites/resdac.org/files/Carrier%20Claim%20Payment%20Denial%20Table.txt",,,
+CLM_PRCSG_IND_CD,Claim-Line Processing Indicator Code,123,124,2,X(02),Indicates whether the service indicated on the claim line was allowed or the reason it was denied. Find Processing Indicator Codes here: http://www.resdac.org/sites/resdac.org/files/Line%20Processing%20Indicator%20Table.txt,,,
+CLM_ADJSMT_TYPE_CD,Claim Adjustment Type Code,125,126,2,X(02),"Indicates whether the claim an original, cancelation, or adjustment claim. Claim Adjustment Type Codes are:
+0=Original Claim
+1=Cancelation Claim
+2=Adjustment claim",,,
+CLM_EFCTV_DT,Claim Effective Date,127,136,10,YYYY-MM-DD,The date the claim was processed and added to the NCH. This is also referred to as the NCH Weekly Processing Date.,,,
+CLM_IDR_LD_DT,Claim IDR Load Date,137,146,10,YYYY-MM-DD,When the claim was loaded into the IDR.,,,
+CLM_CNTL_NUM,Claim Control Number,147,186,40,X(40),A unique number assigned to a claim by the Medicare carrier. This number allows CMS to associate each line item with its respective claim.,,,
+BENE_EQTBL_BIC_HICN_NUM,Beneficiary Equitable BIC HICN Number,187,197,11,X(11),"This number is an “umbrella” HICN that groups certain HICNs together at the beneficiary level. For example, if a beneficiary’s spouse becomes widowed, the HICN will change, but the Beneficiary Equitable BIC HICN will not. This groups the pre- and post-widow status HICNs together. Note that the ONLY use of this field is to link together claims that all represent the same event using the natural key.",,,
+CLM_LINE_ALOWD_CHRG_AMT,Claim Line Allowed Charges Amount,198,214,17,"""-9(13).99""",The amount Medicare approved for payment to the provider.,TotalAllowedAmount,AllowedAmount,
+CLM_DISP_CD,Claim Disposition Code,215,216,2,X(2),"Information regarding payment actions on the claim. Claim Disposition Codes are:
+01=Debit accepted
+02=Debit accepted (automatic adjustment)
+03=Cancel accepted",,,

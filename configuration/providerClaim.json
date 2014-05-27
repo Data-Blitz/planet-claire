@@ -1,0 +1,12 @@
+{
+    "content": {
+        "name":"providerClaim",
+         "attributes": [
+             {
+                 "name":"CUR_CLM_UNIQ_ID",
+                 "approach": "unique",
+                 "input":{"length":30}
+             }
+         ]
+    }
+}

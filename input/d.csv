@@ -1,0 +1,65 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,ReceivedClaimFactColumnName,ReceivedClaimProcedureFactColumnName,ReceivedClaimMedicationFactColumnName
+CUR_CLM_UNIQ_ID,Current Claim Unique Identifier,1,13,13,9(13),A unique identification number assigned to the claim.,Id,,"Id, ReceivedClaimId"
+BENE_HIC_NUM,Beneficiary HIC Number,14,24,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId,,PatientId
+CLM_LINE_NDC_CD,NDC Code,25,35,11,X(11),A universal unique product identifier for human drugs.,,,"NdcCode, MedicationId"
+CLM_TYPE_CD,Claim Type Code,36,37,2,9(02),"Signifies the type of claim being submitted through the Medicare or Medicaid programs. Claim type codes are:
+01=Part D - Original without resubmitted PDE
+02=Part D - Adjusted PDE
+03=Part D - Deleted Claims
+04=Part D - Resubmitted PDE",ReceivedClaimType,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_LINE_FROM_DT,Claim Line From Date,38,47,10,YYYY-MM-DD,"The date the service associated with the line item began (i.e., the date upon which the prescription was filled).","StartDate, EndDate",,FilledDate
+PRVDR_SRVC_ID_QLFYR_CD,Provider Service Identifier Qualifier Code,48,49,2,X(02),"Indicates the type of number used to identify the pharmacy providing the services:
+01= NPI Number
+06=Unique Physician Identification Number (UPIN)
+07=National Council for Prescription Drug Programs (NCPDP) Number
+08=State License Number
+11=TIN
+99=Other mandatory for Standard Data Format",ServiceProviderId,,ServiceProviderId
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_SRVC_PRVDR_GNRC_ID_NUM,Claim Service Provider Generic ID Number,50,69,20,X(20),The number associated with the indicated code in the Provider Service Identification Qualifier Code field.,ServiceProviderId,,ServiceProviderId
+CLM_DSPNSNG_STUS_CD,Claim Dispensing Status Code,70,70,1,X(01),"Indicates the status of prescription fulfillment. Dispensing Codes are:
+P=Partially filled
+C=Completely filled",,,DispensingStatus
+CLM_DAW_PROD_SLCTN_CD,Claim Dispense as Written (DAW) Product Selection Code,71,71,1,X(01),"Indicates the prescriber's instructions regarding generic substitution or how those instructions were followed. DAW Product Selection Codes are:
+0=No product selection indicated
+1=Substitution not allowed by prescriber
+2=Substitution allowed – Patient requested that brand be dispensed
+3=Substitution allowed – Pharmacist selected product dispensed
+4=Substitution allowed – Generic not in stock
+5=Substitution allowed – Brand drug dispensed as generic
+6=Override
+7=Substitution not allowed – Brand drug mandated by law
+8=Substitution allowed – Generic drug not available in marketplace
+9=Other",,,DispenseAsWrittenCode
+CLM_LINE_SRVC_UNIT_QTY,Claim Line Service Unit Quantity,72,84,13,-9(7).9999,The number of dosage units of medication that were dispensed in this fill.,,,QuantityDispensed
+CLM_LINE_DAYS_SUPLY_QTY,Claim Line Days’ Supply Quantity,85,93,9,9(09),The number of days the supply of medication dispensed by the pharmacy will cover.,,,DaysSupply
+PRVDR_PRSBNG_ID_QLFYR_CD,Provider Prescribing ID Qualifier Code,94,95,2,X(02),"Indicates the type of number used to identify the pharmacy providing the services:
+01= NPI Number
+06=Unique Physician Identification Number (UPIN)
+07=National Council for Prescription Drug Programs (NCPDP) Number
+08=State License Number
+11=TIN
+99=Other mandatory for Standard Data Format",PrescribingProviderId,,PrescribingProviderId
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_PRSBNG_PRVDR_GNRC_ID_NUM,Claim Prescribing Provider Generic ID Number,96,115,20,X(20),The number associated with the indicated code in the Provider Prescribing Service Identification Qualifier Code field.,PrescribingProviderId,,PrescribingProviderId
+CLM_LINE_BENE_PMT_AMT,Claim Line Beneficiary Payment Amount,116,128,13,-9(9).99,The claim line payment amount.,TotalInsuranceAmount,,InsuranceAmount
+CLM_ADJSMT_TYPE_CD,Claim Adjustment Type Code,129,130,2,X(02),"Indicates whether the claim an original, cancelation, or adjustment claim. Claim Adjustment Type Codes are:
+0=Original Claim
+1=Cancelation Claim
+2=Adjustment claim",,,
+CLM_EFCTV_DT,Claim Effective Date,131,140,10,YYYY-MM-DD,The date the claim was processed and added to the NCH. This is also referred to as the NCH Weekly Processing Date.,,,
+CLM_IDR_LD_DT,Claim IDR Load Date,141,150,10,YYYY-MM-DD,When the claim was loaded into the IDR.,,,
+CLM_LINE_RX_SRVC_RFRNC_NUM,Claim Line Prescription Service Reference Number,151,162,12,X(012),Identifies a prescription dispensed by a particular service provider on a particular service date.,,,
+CLM_LINE_RX_FILL_NUM,Claim Line Prescription Fill Number,163,171,9,X(09),Assigned to the current dispensed supply by the pharmacy. It designates the sequential order of the original fill or subsequent refills of a prescription.,,,

@@ -1,0 +1,32 @@
+ElementName,DataDescription,StartPosition,EndPosition,DataLength,Format,Comments,ReceivedClaimFactColumnName,ReceivedClaimProcedureFactColumnName,ReceivedClaimMedicationFactColumnName
+CUR_CLM_UNIQ_ID,Current Claim Unique Identifier,1,13,13,9(13),A unique identification number assigned to the claim.,Id,,
+BENE_HIC_NUM,Beneficiary HIC Number,14,24,11,X(11),"A beneficiary identifier. The HICN that appears in this field is the beneficiary’s current HICN, not necessarily the HICN that was used to process the claim.",PatientId,,
+CLM_TYPE_CD,Claim Type Code,25,26,2,9(02),"Signifies the type of claim being submitted through the Medicare or Medicaid programs.
+Claim type codes are:
+10=HHA claim
+20=Non swing bed SNF claim
+30=Swing bed SNF claim
+40=Outpatient claim
+50=Hospice claim
+60=Inpatient claim
+61=Inpatient “Full-Encounter” claim",ReceivedClaimType,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_PROD_TYPE_CD,Claim Product Type Code,27,27,1,X(01),"Codes classifying the diagnosis category:
+E=Accident diagnosis code
+1=First diagnosis E code
+D=Other diagnosis codes",,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+CLM_VAL_SQNC_NUM,Claim Value Sequence Number,28,29,2,9(2),An arbitrary sequential number that uniquely identifies a procedure code record within the claim.,DiagnosisProfileDim columns,,
+CLM_DGNS_CD,Diagnosis Code,30,36,7,X(07),The ICD-9/10 diagnosis code identifying the beneficiary’s illness or disability.,"DiagnosisComboKey, DiagnosisProfileDim columns",,
+BENE_EQTBL_BIC_HICN_NUM,Beneficiary Equitable BIC HICN Number,37,47,11,X(11),"This number is an “umbrella” HICN that groups certain HICNs together at the beneficiary level. For example, if a beneficiary’s spouse becomes widowed, the HICN will change, but the Beneficiary Equitable BIC HICN will not. This groups the pre- and post-widow status HICNs together. Note that the ONLY use of this field is to link together claims that all represent the same event using the natural key.",,,
+PRVDR_OSCAR_NUM,Provider OSCAR Number,48,53,6,X(6),"A facility’s Medicare/Medicaid identification number. It is also known as a Medicare/Medicaid Provider Number, or CCN. This number verifies that a provider has been Medicare certified for a particular type of services.",PlaceOfServiceId,,
+CLM_FROM_DT,Claim From Date,54,63,10,YYYY-MM-DD,The first day on the billing statement that covers services rendered to the beneficiary. Also known as “Statement Covers From Date.”,StartDate,,
+CLM_THRU_DT,Claim Thru Date,64,73,10,YYYY-MM-DD,The last day on the billing statement that covers services rendered to the beneficiary. Also known as the “Statement Covers Through Date.”,EndDate,,
+CLM_POA_IND,Claim Present-on-Admission Indicator,74,80,7,X(7),Indicates whether a patient had the condition listed on the claim line at the time of admission to the facility. Find Present-on-Admission values here: http://www.resdac.org/cms-data/variables/claim-diagnosis-code-i-diagnosis-present-admission-indicator-code,,,
